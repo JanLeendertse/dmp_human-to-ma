@@ -14,15 +14,32 @@ The discussion about a standard for DMP did not come to an accepted consensus, b
 
 ## Technical base
 
-The editable DMP should be available in OpenOffice format and Microsoft Office format. The conversion and export should be processed by internal scripting engines.
+The editable DMP should be available at least in OpenOffice format and Microsoft Office format. The conversion and export should be processed by internal scripting engines.
 
 The development will start with LibreOffice, because I am more familiar with that.
 
 The output should fit into the RDA-DMP structure. Version 1.0 is published on [Github](https://github.com/RDA-DMP-Common/RDA-DMP-Common-Standard/blob/master/examples/JSON/JSON-schema/1.0/maDMP-schema-1.0.json).
 
-## Content handling
+## Content handling by users
 
+The spreadsheet must contain all fields used in RDA-DMP. It should display explainations and guidings to reduce the investigation efforts while working with the template.
 
+Entering data into a sheet must be possible with the only knowledge how to work with spreadsheet software.
+
+The answers of the researchers are stored as spreadsheet file and can be sent around in that format.
+
+## Exporting
+
+The other role is to export data if a JSON object of the stored answers is wanted. The person acting as exporter must know how to start the export script and to process the exported JSON dataset.
+
+There might be two approaches:
+
+1. The script for generating a JSON dataset is stored in the spreadsheet template and can be start from the file itself.
+2. The spreadsheet file uses labels for the answer sections, which can be processed by external scripts.
+
+## Security issues
+
+Usually, macros or internal scripts are recognized as a security issue, because it is the main attack vector. The conditions of processing should be explicated to allow official and functioning workflows. It should be possible for organisations to add certificates to the software, that can be parsed. If exporting approach 2. is implemented, this issue might not be that prevalent. But then two different pieces of software – template for entering user data and script file for processing user data – must be handled.
 
 
 # References
