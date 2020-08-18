@@ -1,0 +1,12 @@
+properties__dmp__properties__
+contactcontributorcost
+created
+dataset
+description
+dmp_idethical_issues_description
+ethical_issues_exist
+ethical_issues_report
+language
+modified
+project
+title
